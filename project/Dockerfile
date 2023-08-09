@@ -2,7 +2,7 @@ FROM python:3.11-alpine
 
 RUN mkdir /app
 
-COPY requirements.txt /app
+COPY ../project/requirements.txt /app
 
 RUN \
  apk add --no-cache postgresql-libs && \
@@ -10,7 +10,7 @@ RUN \
  python3 -m pip install -r /app/requirements.txt --no-cache-dir && \
  apk --purge del .build-deps
 
-COPY project/ /app
+COPY ../project /app
 
 WORKDIR /app
 

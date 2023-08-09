@@ -26,7 +26,8 @@ jobs:
     - name: Build and push
       uses: docker/build-push-action@v4
       with:
-        context: project/Dockerfile
+        context: project/
+        file: project/Dockerfile
         push: true
         tags: lordot/test_cicd:latest
 

@@ -46,7 +46,7 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             sudo docker compose stop
-            sudo dockerc ompose rm django
+            sudo docker сompose rm django
             touch .env
             echo POSTGRES_DB=${{ secrets.POSTGRES_DB }} >> .env
             echo POSTGRES_USER=${{ secrets.POSTGRES_USER }} >> .env

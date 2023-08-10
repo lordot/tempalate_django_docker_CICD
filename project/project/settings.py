@@ -7,7 +7,7 @@ SECRET_KEY = 'secret'
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['3.70.205.157']
+ALLOWED_HOSTS = [os.getenv('SERVER_NAME')]
 
 
 INSTALLED_APPS = [

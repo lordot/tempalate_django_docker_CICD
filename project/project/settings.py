@@ -7,7 +7,8 @@ SECRET_KEY = 'secret'
 
 DEBUG = True
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1", "django"]
+SERVER_NAME = os.getenv('SERVER_NAME')
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "django", SERVER_NAME]
 
 
 INSTALLED_APPS = [
